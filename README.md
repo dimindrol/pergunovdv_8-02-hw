@@ -106,6 +106,8 @@ terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git commit -m 'git add...'
  create mode 100644 .gitignore
 ```
 3.Написали правила для игнорирования всех файлов .pyc, а также все файлы в директории cache 
+Теперь будут игнорироваться все файлы file.рус file.рус.рус итд 
+
 ```bash
 terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git diff
 diff --git a/.gitignore b/.gitignore
