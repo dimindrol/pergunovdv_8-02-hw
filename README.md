@@ -84,66 +84,72 @@ To https://github.com/dimindrol/GIT_HOMEWORK_PERGUNOV
 ![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-01-hw/blob/771d0cbfd11b71e3adddc46f03b7e9a6df312337/github.png)`
 
 ### Задание 2
-
-1. Создали файл gitignote
+1. Создали файл .gitignore и проверили его статус сразу после создания.
 ```bash
 terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ touch .gitignore
-```
-2. Добавили правила
-```bash
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ cat .gitignore 
-# ignore all рус
-*.рус
-cashed/
-```
-3. Проверили выполнение правил создали файлы внутри папки cashed и файлы которые закачиваются на .рус
-И для проверки создали файлы
-```bash
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ touch chtoto.рус
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ touch kakoito.рус
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ mkdir cashed
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ cd cashed/
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed$ mkdir newpapka
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed$ touch file
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed$ cd newpapka/
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed/newpapka$ touch file
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed/newpapka$ cd ..
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV/cashed$ cd ..
-```
-4. Добавляем нужные нам файлы используя git add и как мы видим файлы на которые мы создали правила добавить в GIT нельзя
-```bash
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git add .gitignore 
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git add chtoto.рус 
-The following paths are ignored by one of your .gitignore files:
-chtoto.рус
-hint: Use -f if you really want to add them.
-hint: Turn this message off by running
-hint: "git config advice.addIgnoredFile false"
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git add cashed/
-The following paths are ignored by one of your .gitignore files:
-cashed
-hint: Use -f if you really want to add them.
-hint: Turn this message off by running
-hint: "git config advice.addIgnoredFile false"
-```
-5. Делаем комент и пушим
-```bash
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git commit -m 'ADD .gitignore'
-[main 2d4055c] ADD .gitignore
- 1 file changed, 3 insertions(+)
- create mode 100644 .gitignore
-terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git push origin main
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://github.com/dimindrol/GIT_HOMEWORK_PERGUNOV
-74f3aa4..2d4055c  main -> main
-```
-6. [Ссылка на Решение (commit)](https://github.com/dimindrol/GIT_HOMEWORK_PERGUNOV/commit/2d4055c6ac3c62151a45554584e4868b7dddba69)
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
-![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-01-hw/blob/a39511463b723e12b721317854c4a04408e22750/gitignore.png)`
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+2. Добавили файл .gitignore в следующий коммит
+```bash
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git add .
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git commit -m 'git add...'
+[main 2b02487] git add...
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+```
+3.Написали правила для игнорирования всех файлов .pyc, а также все файлы в директории cache 
+```bash
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git diff
+diff --git a/.gitignore b/.gitignore
+index e69de29..d4df598 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -0,0 +1,5 @@
++#игнорировать любые файлы .pyc
++#Теперь будут игнорироваться все файлы file.рус file.рус.рус итд 
++*.рус*
++#игнорирование всех файлов директории cache
++cache/*
+\ No newline at end of file
+```
+4. Сделали комит и пуш
+```bash
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git add .
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git commit -m 'add rules'
+[main f018c02] add rules
+ 1 file changed, 5 insertions(+)
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 779 bytes | 779.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dimindrol/GIT_HOMEWORK_PERGUNOV
+   9a9a813..f018c02  main -> main
+```
+5. Проверим правила используя команду git check-ignore -v
+```bash
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git check-ignore -v .рус
+.gitignore:3:*.рус*     ".\321\200\321\203\321\201"
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git check-ignore -v ававав.рус.ру
+.gitignore:3:*.рус*     "\320\260\320\262\320\260\320\262\320\260\320\262.\321\200\321\203\321\201.\321\200\321\203"
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git check-ignore -v ру.рус.ру
+.gitignore:3:*.рус*     "\321\200\321\203.\321\200\321\203\321\201.\321\200\321\203"
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git check-ignore -v cache/ру
+.gitignore:5:cache/*    "cache/\321\200\321\203"
+terraform@terraform:~/GIT_HOMEWORK_PERGUNOV$ git check-ignore -v cache/test.рус
+.gitignore:5:cache/*    "cache/test.\321\200\321\203\321\201"
+```
+6. Ссылка на решение
+[Ссылка на Решение (commit)](https://github.com/dimindrol/GIT_HOMEWORK_PERGUNOV/commit/f018c026a6ffe06a2e6689a64965defd83476c2e)
 
 ### Задание 3
 
