@@ -27,6 +27,8 @@ export PATH=$PATH:$GOPATH/bin
 #Обновили переменные окружения
 source ~/.profile
 ```
+3. Сделали Fork репозитория https://github.com/dimindrol/8.02-DevOps.-I-D
+4. 
     
 ### Задание 2
 
