@@ -1,6 +1,7 @@
 # Домашнее задание к занятию "`8.02 Что такое DevOps. СI/СD`" - `Пергунов Дмитрий`
 
 ### Задание 1
+0. Устанавливаем JRE
 1. Установили jenkins
 ```bash
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key |
