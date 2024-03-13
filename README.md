@@ -33,6 +33,7 @@ source ~/.profile
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 5. Сделали Fork репозитория https://github.com/dimindrol/8.02-DevOps.-I-D
+6. Создали jenkins Freestyle Project
     
 ### Задание 2
 
