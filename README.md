@@ -14,9 +14,18 @@ sudo apt-get install jenkins
 ```
 2. Установили Go
 ```bash
-wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
-echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+sha256sum go1.22.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
+
+#Настройка переменных окружений
+sudo nano ~/.profile
+#Добавление информации в файл
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/goproject
+export PATH=$PATH:$GOPATH/bin
+#Обновили переменные окружения
+source ~/.profile
 ```
     
 ### Задание 2
