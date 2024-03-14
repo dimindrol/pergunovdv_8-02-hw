@@ -20,6 +20,15 @@ docker login ubuntu-bionic:8082 -u admin -p admin && docker push ubuntu-bionic:8
 
  
 ### Задание 2
+1. Создали новый проект Pipeline
+2. Переписали сборку из задания 1 на declarative в виде кода [Ссылка на Решение (PIPELINE)](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/main/pipeline)
+3. Решение:
+   
+![Название скриншота 2]()`
+
+![Название скриншота 2]()`
+
+![Название скриншота 2]()`
 
 ### Задание 3
 
