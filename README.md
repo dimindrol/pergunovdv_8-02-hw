@@ -24,11 +24,11 @@ docker login ubuntu-bionic:8082 -u admin -p admin && docker push ubuntu-bionic:8
 2. Переписали сборку из задания 1 на declarative в виде кода [Ссылка на Решение (PIPELINE)](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/main/pipeline)
 3. Решение:
    
-![Название скриншота 2]()`
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/aa9f5dcb3a412cd3c5111aa0447b721a6b491752/img/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D1%81%D0%B1%D0%BE%D1%80%D0%BE%D0%BA.png)`
 
-![Название скриншота 2]()`
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/aa9f5dcb3a412cd3c5111aa0447b721a6b491752/img/stage%20view.png)`
 
-![Название скриншота 2]()`
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/aa9f5dcb3a412cd3c5111aa0447b721a6b491752/img/%D1%88%D0%B0%D0%B3%D0%B8%20%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F.png)`
 
 ### Задание 3
 
