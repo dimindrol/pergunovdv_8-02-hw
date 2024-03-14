@@ -31,5 +31,7 @@ docker login ubuntu-bionic:8082 -u admin -p admin && docker push ubuntu-bionic:8
 ![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/aa9f5dcb3a412cd3c5111aa0447b721a6b491752/img/%D1%88%D0%B0%D0%B3%D0%B8%20%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F.png)`
 
 ### Задание 3
+1. Nexus установлен.
+2. Создали RAW_hosted репозиторий http://192.168.56.10:8081/repository/Raw_hosted/
 
 
