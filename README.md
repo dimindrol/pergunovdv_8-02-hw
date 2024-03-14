@@ -2,7 +2,7 @@
 
 ### Задание 1
 1. Установил сервер и необходимые компоненты используя [Ссылка на Решение (Vagrant file)](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/main/Vagrantfile)
-2. Настроил Jenkins подулючил репозиторий [Ссылка на Решение (GIT)]([https://github.com/netology-code/sdvps-materials.git), далее настроил сборку
+2. Настроил Jenkins подулючил репозиторий [Ссылка на Решение (GIT)]([https://github.com/netology-code/sdvps-materials.git) , далее настроил сборку
 ```bash
 /usr/local/go/bin/go test .
 docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
