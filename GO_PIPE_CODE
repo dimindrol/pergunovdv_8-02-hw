@@ -1,0 +1,22 @@
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git 'https://github.com/netology-code/sdvps-materials.git'}
+  }
+  stage('Test') {
+   steps {
+    sh '/usr/local/go/bin/go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh '/usr/local/go/bin/go build -a -installsuffix nocgo -o app.v$BUILD_NUMBER'
+   }
+  }
+  stage('Push') {
+   steps {
+    sh 'curl -v --user admin:admin --upload-file ./app.v$BUILD_NUMBER http://192.168.56.10:8081/repository/Raw_hosted/app.v$BUILD_NUMBER'   }
+  }
+ }
+}
