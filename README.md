@@ -33,5 +33,17 @@ docker login ubuntu-bionic:8082 -u admin -p admin && docker push ubuntu-bionic:8
 ### Задание 3
 1. Nexus установлен.
 2. Создали RAW_hosted репозиторий http://192.168.56.10:8081/repository/Raw_hosted/
+3. Изменили pipeline, чтобы собирался docker образ [Ссылка на КОД (PIPELINE GO)](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/main/GO_PIPE_CODE)
+4. Загрузили Файл на сервер результат
+
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/28ec3193ce43bcbdcb9a577070cc1f8adb7f8d79/img/GO_PIPE_LOG.png)`
+
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/28ec3193ce43bcbdcb9a577070cc1f8adb7f8d79/img/GO_PIPE_STAGE.png)`
+
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/28ec3193ce43bcbdcb9a577070cc1f8adb7f8d79/img/GO_PIPE_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D1%81%D0%B1%D0%BE%D1%80%D0%BE%D0%BA.png)`
+
+![Название скриншота 2](https://github.com/dimindrol/pergunovdv_8-02-hw/blob/28ec3193ce43bcbdcb9a577070cc1f8adb7f8d79/img/NEXUS_PIPE_GO.png)`
+
+
 
 
